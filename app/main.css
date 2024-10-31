@@ -1,0 +1,97 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+}
+  
+.maincarousel.p-carousel .p-carousel-content .p-carousel-prev, .maincarousel.p-carousel .p-carousel-content .p-carousel-next {
+  position: absolute;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  background: #054C89;
+}
+
+.maincarouselnone.p-carousel .p-carousel-content .p-carousel-prev, .maincarouselnone.p-carousel .p-carousel-content .p-carousel-next {display: none;}
+
+.p-carousel .p-carousel-content .p-carousel-prev {left: 1rem; z-index: 1;}
+.p-carousel .p-carousel-content .p-carousel-next {right: 1rem; z-index: 1;}
+
+.footer-wrap {background-color:#054C89;}
+.feedback-across {clip-path: polygon(0% 0%, 100% 0%, 100% 89%, 0 100%);}
+.footer-across {clip-path: polygon(0% 15%, 100% 0%, 100% 88%, 0 100%);}
+.ymaps-across {clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0 100%);}
+
+.arrow {
+  position: absolute;
+  z-index: 1;
+  height: 350px;
+  transform: scaleX(-1) translateX(-380px);
+  cursor: pointer;
+  top: 13%;
+  left: 13%;
+}
+
+.blinker {animation: blinker .6s linear 3;}
+
+@keyframes blinker {100% { opacity: 0; }}
+
+.advantage-img {
+  background-image: url(/sport1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 28rem;
+}
+
+.sectionlist {
+  list-style: none;
+  padding: 0;
+}
+
+.sectionlist li {
+  display: flex;
+  padding-left: 1.3em;
+  margin-bottom: 3px;
+}
+
+.sectionlist li:before {
+  font-family: primeicons;
+  font-style:normal;
+  font-weight: 900;
+  color: #054C89;
+  content: '\e909';
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+
+/* .sectionlist.adv li:before {content: '\e9e2';} */
+
+.sectionlist.adv li:before {
+  content: url('/bird.png');
+}
+
+.imgTextWrap {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  top: 70%;
+  background: rgba(5, 76, 137, .9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .p-scrollpanel-content {padding: unset !important;} */
+
+/* Tablet and Smaller Desktop */
+@media (max-width: 1120px) {
+  .feedback-across {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);}
+  .footer-across {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);}
+  .ymap-across {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);}
+}
+
+@media (max-width: 910px) {.form-icon {display: none;}}
